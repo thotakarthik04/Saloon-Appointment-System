@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Log in</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="login-section">
+        <form id="login-form">
+            <label for="email-login">Email Address</label>
+            <input type="email" name="email-login" id="email-login" placeholder="Email Address" required><br><br>
+            <label for="password-login">Password</label>
+            <input type="password" name="password-login" id="password-login" placeholder="Password" required><br><br>
+            <button type="submit" id="login-submit">Log in</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </section>
+    <script>
+    var email,password,reg_details;
+    document.getElementById("login-submit").onclick=function(){
+        event.preventDefault();
+        email=document.getElementById("email-login").value;
+        password=document.getElementById("password-login").value;
+        if(email==='root@root'){
+            if(password==='root@root'){
+                window.location.href='book.html';
+                var log=1;
+                var log_string=JSON.stringify(log);
+                localStorage.setItem("logged",log);
+            }
+            else{
+                window.alert("Incorrect password")
+            }
+        }
+        else{
+            reg_details=localStorage.getItem("client");
+            if(reg_details===null){
+                window.alert('Invalid credentials')
+            }
+            else{
+                reg_details=JSON.parse(reg_details);
+                if(email===reg_details[1] && password===reg_details[3]){
+                    window.location.replace('book.html');
+                    var log=1;
+                    var log_string=JSON.stringify(log);
+                    localStorage.setItem("logged",log);
+                }
+                else{
+                    window.alert("Invalid credentials");
+                }
+            }
+        } 
+    }
+    </script>
+</body>
+</html>

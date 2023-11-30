@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sign up</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="signup-section">
+        <form id="signup-form">
+            <label for="username-signup">Username</label>
+            <input type="text" name="username-signup" id="username-signup" placeholder="Name" required><br><br>
+            <label for="email-signup">Email Address</label>
+            <input type="email" name="email-signup" id="email-signup" placeholder="Email" required><br><br>
+            <label for="phone-signup">Phone Number</label>
+            <input type="text" name="phone-signup" id="phone-signup" placeholder="Phone Number" required><br><br>
+            <label for="password-signup">Password</label>
+            <input type="password" name="password-signup" id="password-signup" placeholder="Password" required><br><br>
+            <label for="confpassword-signup">Confirm Password</label>
+            <input type="password" name="confpassword-signup" id="confpassword-signup" placeholder="Confirm Password" required><br><br>
+            <button type="submit" id="signup-submit">Sign up</button>
+        </form>
+    </section>
+    <script>
+    var username,email,phone,password,confpassword,reg_details,reg_string,local_string;
+    document.getElementById("signup-submit").onclick=function(){
+        event.preventDefault();
+        username=document.getElementById("username-signup").value;
+        email=document.getElementById("email-signup").value;
+        phone=document.getElementById("phone-signup").value;
+        password=document.getElementById("password-signup").value;
+        confpassword=document.getElementById("confpassword-signup").value;
+        local_string=localStorage.getItem("client");
+        if(local_string===null){
+            if(password==confpassword){
+                reg_details=[username,email,phone,password]
+                reg_string=JSON.stringify(reg_details);
+                localStorage.setItem("client",reg_string);
+                window.alert("Account creation Success");
+                window.location.href='login.html'
+            }
+            else{
+                window.alert('Passwords don\'t match')
+            }
+        }
+        else{
+            window.alert("client account limit[1] exceeded for your machine");
+        }
+    }
+    </script>
+</body>
+</html>

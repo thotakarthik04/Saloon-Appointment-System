@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, intial-
+    scale=1.0">
+    <title>Solar Empowerment</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href=""index.html><img src="images/lpu-logo.png" width="800" height="80"></a>
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="images/broll.mp4" type="video/mp4">
+            </video>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="book.html">book appointment</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="test-box">
+            <h1>Unlock Your Best Look Yet! Welcome to Urban Look</h1>
+            <p> Where Style Meets Elegance. Discover a World of Glamour and Indulge in the Ultimate Salon Experience.
+                <br> Elevate Your Beauty with Our Expert Stylists and Luxurious Treatments. 
+            </p>
+            <a href=""class="hero-btn">Book appointment</a>
+        </div>
+    </section>
+
+<!--- campus -->
+
+<section class="campus">
+<h1>Why to choose us</h1>
+<p>Embrace solar energy for a brighter, cleaner, and sustainable India. Join the revolution today and light up the path to a greener tomorrow!"</p>
+
+<div class="row">
+    <div class="campus-col">
+        <img src="images/staff.jpg" width="300" height="580">
+        <div class="layer">
+            <h3>Experienced Staff</h3>
+        </div>
+    </div>
+    <div class="campus-col">
+        <img src="images/book.jpg" width="300" height="580">
+        <div class="layer">
+            <h3>Pre booking online</h3>
+        </div>
+    </div>
+    <div class="campus-col">
+        <img src="images/money.jpg" width="300" height="580">
+        <div class="layer">
+            <h3>Affordable Price</h3>
+        </div>
+    </div>
+</div>
+</section>
+
+<!------- Facilities ---->
+ <section class="Facilities">
+   <h1>Our Branches
+   </h1>
+   <p>Below are the india's top Saloons which are the part of this family.</p>
+    
+   <div class="row">
+    <div class="facilities-col">
+        <img src="images/saloon1.jpg" width="500" height="205">
+        <h3>Mumbai</h3>
+    </div>
+    <div class="facilities-col">
+        <img src="images/saloon2.jpg" width="500" height="200">
+        <h3>Hyderabad</h3>
+    </div>
+    <div class="facilities-col">
+        <img src="images/saloon3.jpg" width="500" height="200">
+        <h3>Delhi</h3>
+        </div>
+   </div>
+ </section>
+  <!-----testimonials-->
+   
+  <section class="testimonials">
+    <h1>celebrities about us</h1>
+    <p>We provide our saloon services to India's well known celebrities</p>
+
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="images/allu.webp">
+            <div>
+                <h2>The style behind my hair is Urban look</h2>
+                <h3>-Allu Arjun</h3>
+                <P>ㅤㅤㅤㅤㅤㅤㅤㅤㅤIndia's one of top actor</P>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="images/ram.jpg">
+            <div>
+                <h2>People say that i am stylish and i give my credit to Urban look</h2>
+                <h3>-Ram Charan</h3>
+                <p>India's one of top actor</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+<!-----Call to action-->
+
+<section class="cta">
+    <h1>Elevate your style, join us in the pursuit of elegance.</h1>
+    <a href="book.html" class="hero-btn">Book appointment</a>
+</section>
+<!-----Footer----->
+
+<section class="footer">
+    <h4>ABOUT Us</h4>
+    <p>This is a project given By CSE326 in lpu <br>
+    This project also consists a appointment booking system </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>LPU</p>
+</section>
+
+
+    <!--------JavaScript for Toggle Menu------->
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
